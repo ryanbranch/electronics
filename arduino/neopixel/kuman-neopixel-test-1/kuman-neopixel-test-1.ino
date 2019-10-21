@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//TODO:
+//Placeholder
+
 Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, 50,
   NEO_MATRIX_TOP  + NEO_MATRIX_RIGHT  +
   NEO_MATRIX_ROWS    + NEO_MATRIX_ZIGZAG,
@@ -17,7 +20,7 @@ Adafruit_NeoMatrix placeholderMatrix = Adafruit_NeoMatrix(8, 8, 50,
 
 //List holding the alphabetical indices of the word to be spelled
 //int phrase[1];
-int phrase[1][64];
+int phrase[1][256];
 //Index within phrase of the alphabetical index of the current character to display
 int phraseIndex = 0;
 
@@ -248,7 +251,58 @@ void createLetterE() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER E");
 }
 
@@ -258,7 +312,48 @@ void createLetterF() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
   Serial.print("MADE LETTER F");
 }
 
@@ -268,7 +363,47 @@ void createLetterG() {
       states[y][x] = false;
     }
   }
-  
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
   Serial.print("MADE LETTER G");
 }
 
@@ -278,7 +413,46 @@ void createLetterH() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER H");
 }
 
@@ -288,7 +462,46 @@ void createLetterI() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][3] = true;
+  states[2][4] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER I");
 }
 
@@ -298,7 +511,42 @@ void createLetterJ() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][4] = true;
+  states[2][5] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
   Serial.print("MADE LETTER J");
 }
 
@@ -308,7 +556,52 @@ void createLetterK() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][4] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER K");
 }
 
@@ -318,7 +611,40 @@ void createLetterL() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER L");
 }
 
@@ -434,7 +760,54 @@ void createLetterO() {
       states[y][x] = false;
     }
   }
-  
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
   Serial.print("MADE LETTER O");
 }
 
@@ -444,7 +817,52 @@ void createLetterP() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
   Serial.print("MADE LETTER P");
 }
 
@@ -454,7 +872,47 @@ void createLetterQ() {
       states[y][x] = false;
     }
   }
-  
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER Q");
 }
 
@@ -464,7 +922,59 @@ void createLetterR() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][5] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER R");
 }
 
@@ -474,7 +984,56 @@ void createLetterS() {
       states[y][x] = false;
     }
   }
-  
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
   Serial.print("MADE LETTER S");
 }
 
@@ -484,7 +1043,34 @@ void createLetterT() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][3] = true;
+  states[2][4] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[7][3] = true;
+  states[7][4] = true;
   Serial.print("MADE LETTER T");
 }
 
@@ -494,7 +1080,56 @@ void createLetterU() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
   Serial.print("MADE LETTER U");
 }
 
@@ -504,7 +1139,40 @@ void createLetterV() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[7][3] = true;
+  states[7][4] = true;
   Serial.print("MADE LETTER V");
 }
 
@@ -514,7 +1182,50 @@ void createLetterW() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][0] = true;
+  states[3][1] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][6] = true;
+  states[3][7] = true;
+  states[4][0] = true;
+  states[4][1] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][6] = true;
+  states[4][7] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][5] = true;
+  states[7][6] = true;
   Serial.print("MADE LETTER W");
 }
 
@@ -524,7 +1235,46 @@ void createLetterX() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[4][1] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[4][6] = true;
+  states[5][0] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][5] = true;
+  states[5][6] = true;
+  states[5][7] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER X");
 }
 
@@ -534,7 +1284,36 @@ void createLetterY() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][0] = true;
+  states[2][1] = true;
+  states[2][2] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[2][7] = true;
+  states[3][1] = true;
+  states[3][2] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[3][6] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[4][5] = true;
+  states[5][3] = true;
+  states[5][4] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[7][3] = true;
+  states[7][4] = true;
   Serial.print("MADE LETTER Y");
 }
 
@@ -544,7 +1323,50 @@ void createLetterZ() {
       states[y][x] = false;
     }
   }
-  
+  states[0][0] = true;
+  states[0][1] = true;
+  states[0][2] = true;
+  states[0][3] = true;
+  states[0][4] = true;
+  states[0][5] = true;
+  states[0][6] = true;
+  states[0][7] = true;
+  states[1][0] = true;
+  states[1][1] = true;
+  states[1][2] = true;
+  states[1][3] = true;
+  states[1][4] = true;
+  states[1][5] = true;
+  states[1][6] = true;
+  states[1][7] = true;
+  states[2][4] = true;
+  states[2][5] = true;
+  states[2][6] = true;
+  states[3][3] = true;
+  states[3][4] = true;
+  states[3][5] = true;
+  states[4][2] = true;
+  states[4][3] = true;
+  states[4][4] = true;
+  states[5][1] = true;
+  states[5][2] = true;
+  states[5][3] = true;
+  states[6][0] = true;
+  states[6][1] = true;
+  states[6][2] = true;
+  states[6][3] = true;
+  states[6][4] = true;
+  states[6][5] = true;
+  states[6][6] = true;
+  states[6][7] = true;
+  states[7][0] = true;
+  states[7][1] = true;
+  states[7][2] = true;
+  states[7][3] = true;
+  states[7][4] = true;
+  states[7][5] = true;
+  states[7][6] = true;
+  states[7][7] = true;
   Serial.print("MADE LETTER Z");
 }
 
@@ -567,27 +1389,87 @@ void createLetter() {
     Serial.print("\n-1 <--------INDEX\n");
     index = phrase[0][phraseIndex];
   }
-  if (index == 0) {
+  if (index == 32) {
     Serial.print("0 <--------INDEX\n");
     createBlankSpace();
   }
-  else if (index == 1) {
+  else if (index == 65) {
     createLetterA();
   }
-  else if (index == 2) {
+  else if (index == 66) {
     createLetterB();
   }
-  else if (index == 3) {
+  else if (index == 67) {
     createLetterC();
   }
-  else if (index == 4) {
+  else if (index == 68) {
     createLetterD();
   }
-  else if (index == 13) {
+  else if (index == 69) {
+    createLetterE();
+  }
+  else if (index == 70) {
+    createLetterF();
+  }
+  else if (index == 71) {
+    createLetterG();
+  }
+  else if (index == 72) {
+    createLetterH();
+  }
+  else if (index == 73) {
+    createLetterI();
+  }
+  else if (index == 74) {
+    createLetterJ();
+  }
+  else if (index == 75) {
+    createLetterK();
+  }
+  else if (index == 76) {
+    createLetterL();
+  }
+  else if (index == 77) {
     createLetterM();
   }
-  else if (index == 14) {
+  else if (index == 78) {
     createLetterN();
+  }
+  else if (index == 79) {
+    createLetterO();
+  }
+  else if (index == 80) {
+    createLetterP();
+  }
+  else if (index == 81) {
+    createLetterQ();
+  }
+  else if (index == 82) {
+    createLetterR();
+  }
+  else if (index == 83) {
+    createLetterS();
+  }
+  else if (index == 84) {
+    createLetterT();
+  }
+  else if (index == 85) {
+    createLetterU();
+  }
+  else if (index == 86) {
+    createLetterV();
+  }
+  else if (index == 87) {
+    createLetterW();
+  }
+  else if (index == 88) {
+    createLetterX();
+  }
+  else if (index == 89) {
+    createLetterY();
+  }
+  else if (index == 90) {
+    createLetterZ();
   }
   else {
     Serial.print("INDEX NOT SUPPORTED");
@@ -609,28 +1491,25 @@ void setup() {
   matrix.fillScreen(0);
   placeholderMatrix.fillScreen(0);
 
-  //Define the phrase to be displayed
-  phrase[0][0] = 1;
-  phrase[0][1] = 13;
-  phrase[0][2] = 1;
-  phrase[0][3] = 14;
-  phrase[0][4] = 4;
-  phrase[0][5] = 1;
-  phrase[0][6] = 2;
-  phrase[0][7] = 3;
-  phrase[0][8] = 4;
-  phrase[0][9] = 0;
-  phrase[0][10] = -1;
+  String displayString = "TESTING  STRING    ";
+  int numChars = displayString.length();
+  //Places the character values into the phrase array
+  for (int i = 0; i < numChars; i++) {
+    displayString[i] = toupper(displayString[i]);
+    phrase[0][i] = int(displayString[i]);
+  }
+  //Adds the trailing -1 value to allow repetition
+  phrase[0][numChars] = -1;
 }
 
 void loop() {
   Serial.print("looping");
 
   bool calcMatrix = true;
-  int randCount = 0;
+  int count = 0;
   int i = 0;
   while (i == 0) {
-    uint16_t testColor = matrix.Color(32 + rand() % 64, 64 + rand() % 32, 64 + rand() % 32);
+    uint16_t testColor = matrix.Color(96 + rand() % 64, 64 + rand() % 64, 32 + rand() % 64);
     //Uses phraseIndex to create a new letter
     Serial.print(phraseIndex);
     Serial.print("<---- phraseIndex\n");
@@ -643,7 +1522,7 @@ void loop() {
       for (int y = 0; y < 8; y++) {
         for (int x = 0; x < 8; x++) {
           if (states[y][x]) {
-            uint16_t pixelColor = matrix.Color((32 + rand() % 16 + (x * y / 3)) % 255, (32 + rand() % 16 + 8 * x) % 255, (32 + rand() % 16 + 8 * y) % 255);
+            uint16_t pixelColor = matrix.Color(((32 + x * y) % 255), (32 + (x * (count % 8)) % 255), (32 + (y * (count % 8)) % 255));
             matrix.drawPixel(x, y, pixelColor);
           }
         }
@@ -654,7 +1533,7 @@ void loop() {
     //Displays the calculated letter
     // The first line usees a global variable but the second just sets it to a specified value
     //int timeRemaining = timePerFrame;
-    int timeRemaining = 100;
+    int timeRemaining = 50;
     
     int timeOn = 2;
     int timeOff = 5;
@@ -671,6 +1550,7 @@ void loop() {
     matrix.fill(0);
     matrix.show();
     calcMatrix = true;
+    count++;
   }
 
 }
