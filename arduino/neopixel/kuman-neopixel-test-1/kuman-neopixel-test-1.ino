@@ -26,6 +26,15 @@ int phraseIndex = 0;
 
 //Holds the pixel on/off states for a given frame
 bool states[8][8];
+//Determines whether a scrolling transition will be used between characters
+bool scroll = true;
+//State matrix for the previously displayed character
+bool previousChar[8][8];
+//State matrix for the character currently being displayed
+bool thisChar[8][8];
+//State matrix for the current transition between previousChar and thisChar
+bool currentStates[8][8];
+
 //Determines the amount of time (ms) for which each frame in the loop should be displayed
 int timePerFrame = 200;
 
@@ -1379,6 +1388,15 @@ void createBlankSpace() {
   Serial.print("MADE BLANK SPACE");
 }
 
+void createFilledSpace() {
+  for(int y = 0; y < 8; y++) {
+    for (int x = 0; x < 8; x++) {
+      states[y][x] = true;
+    }
+  }
+  Serial.print("MADE FILLED SPACE");
+}
+
 void createLetter() {
   Serial.print("CREATING LETTER\n");
   Serial.print(phraseIndex);
@@ -1389,7 +1407,24 @@ void createLetter() {
     Serial.print("\n-1 <--------INDEX\n");
     index = phrase[0][phraseIndex];
   }
-  if (index == 32) {
+
+  //State matrix for the previously displayed character
+bool previousChar[8][8];
+//State matrix for the character currently being displayed
+bool thisChar[8][8];
+//State matrix for the current transition between previousChar and thisChar
+bool currentStates[8][8];
+  //Resets the matrix
+  if (scroll) {
+    //need to set the previousChar array equal to the states array but this is the wrong way to do it
+    //i think using memcpy and possibly a destructor is the way to go, talk to Collin about it
+    //previousChar = states;
+    Serial.print("PLACEHOLDER -1\n");
+  }
+  if (index == 1) {
+    createFilledSpace();
+  }
+  else if (index == 32) {
     Serial.print("0 <--------INDEX\n");
     createBlankSpace();
   }
@@ -1475,6 +1510,12 @@ void createLetter() {
     Serial.print("INDEX NOT SUPPORTED");
     exit(42);
   }
+  if (scroll) {
+    //need to set the thisChar array equal to the states array but this is the wrong way to do it
+    //i think using memcpy and possibly a destructor is the way to go
+    //thisChar = states;
+    Serial.print("PLACEHOLDER 0\n");
+  }
   //Increments phraseIndex
   phraseIndex++;
   Serial.print("Incremented phraseIndex.");
@@ -1491,13 +1532,21 @@ void setup() {
   matrix.fillScreen(0);
   placeholderMatrix.fillScreen(0);
 
-  String displayString = "TESTING  STRING    ";
+  String displayString = "I LOVE U SWEATY  ";
   int numChars = displayString.length();
   //Places the character values into the phrase array
   for (int i = 0; i < numChars; i++) {
     displayString[i] = toupper(displayString[i]);
     phrase[0][i] = int(displayString[i]);
   }
+  
+  //TEMPORARY, FOR MAKING ALL CHARACTERS SOLID
+  //SHOULD BE DISABLED WHEN NOT IN USE
+  //for (int i = 0; i < numChars; i++) {
+  //  phrase[0][i] = 1;
+  //}
+
+  
   //Adds the trailing -1 value to allow repetition
   phrase[0][numChars] = -1;
 }
@@ -1506,34 +1555,54 @@ void loop() {
   Serial.print("looping");
 
   bool calcMatrix = true;
-  int count = 0;
-  int i = 0;
-  while (i == 0) {
-    uint16_t testColor = matrix.Color(96 + rand() % 64, 64 + rand() % 64, 32 + rand() % 64);
+  int i = 1;
+  while (i >= 0) {
+    matrix.show();
+    
+    //uint16_t testColor = matrix.Color(96 + rand() % 64, 64 + rand() % 64, 32 + rand() % 64);
     //Uses phraseIndex to create a new letter
     Serial.print(phraseIndex);
     Serial.print("<---- phraseIndex\n");
     createLetter();
+
+    if (scroll) {
+      Serial.print("PLACEHOLDER");
+    }
     
-    
-    int randTarget = rand() % 8;
+    //int randTarget = rand() % 8;
     if (calcMatrix) {
       Serial.print("TIME TO CALCULATE NEW MATRIX\n");
+
+      int baseRed = 0;
+      int baseBlue = 0;
+      int baseGreen = 0;
+      while (baseRed + baseBlue + baseGreen < 400) {
+        baseRed = rand() % 255;
+        baseBlue = rand() % 255;
+        baseGreen = rand() % 255;
+      }
+      
       for (int y = 0; y < 8; y++) {
         for (int x = 0; x < 8; x++) {
           if (states[y][x]) {
-            uint16_t pixelColor = matrix.Color(((32 + x * y) % 255), (32 + (x * (count % 8)) % 255), (32 + (y * (count % 8)) % 255));
+            uint16_t pixelColor = matrix.Color((baseRed + (i % 8 + 1) * 8) % 255,
+                                               (baseBlue + (x + 1) * 8) % 255,
+                                               (baseGreen + (y + 1) * 8) % 255);
+            //uint16_t pixelColor = matrix.Color((((x + 1) * (y + 1) + (i % 20)) % 255),
+            //                                   (((x + 1) * (y + 1) + (i % 30)) % 255),
+            //                                   (((x + 1) * (y + 1) + (i % 40)) % 255));
+            //uint16_t pixelColor = matrix.Color(192, 192, 192);
             matrix.drawPixel(x, y, pixelColor);
           }
         }
       }
       calcMatrix = false;
     }
-
+    
     //Displays the calculated letter
     // The first line usees a global variable but the second just sets it to a specified value
     //int timeRemaining = timePerFrame;
-    int timeRemaining = 50;
+    int timeRemaining = 200;
     
     int timeOn = 2;
     int timeOff = 5;
@@ -1546,11 +1615,12 @@ void loop() {
       //Serial.print(timeRemaining);
       //Serial.print("\n");
     }
+    
     Serial.print("TIME TO DISPLAY A NEW LETTER.\n");
     matrix.fill(0);
     matrix.show();
     calcMatrix = true;
-    count++;
+    i++;
   }
 
 }
