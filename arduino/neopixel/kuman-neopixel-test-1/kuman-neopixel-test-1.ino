@@ -1532,7 +1532,7 @@ void setup() {
   matrix.fillScreen(0);
   placeholderMatrix.fillScreen(0);
 
-  String displayString = "I LOVE U SWEATY  ";
+  String displayString = "TESTING T E S T ";
   int numChars = displayString.length();
   //Places the character values into the phrase array
   for (int i = 0; i < numChars; i++) {
